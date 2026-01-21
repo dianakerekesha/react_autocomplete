@@ -18,7 +18,7 @@ export const Autocomplete: React.FC<Props> = ({
   const [isSearching, setIsSearching] = useState(true);
 
   useEffect(() => {
-    if (!query) {
+    if (!query.trim()) {
       setSuggestions(people);
       setIsSearching(false);
 
